@@ -1,0 +1,373 @@
+html{
+	scroll-behavior: smooth;
+	--dark-col: #776368;
+	--pink: #ffd1dc;
+	--green: #dcf4ef;
+	--fs: calc(60vw/40);
+}
+* {
+	padding: 0; 
+	margin: 0;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: normal;
+	color: var( --dark-col);
+	line-height: 1.8em;
+}
+a{
+	text-decoration: none;
+}
+h2{
+	font-weight: 600;
+	font-size: var(--fs);
+	text-align: left;
+}
+#footer{
+	height: 7vh;
+	padding-top: 3vh;
+	background-color: var(--pink);
+	text-align: center;
+}
+.container{
+	display: grid;
+	grid-template-columns: 2fr 2fr 1fr 1fr 2fr 2fr;  
+	grid-template-rows: 5vh 95vh repeat(14, auto) 7vh auto auto;
+	grid-template-areas: 
+	"h h h h h h"
+	"l l l l l l"
+	"t1 t1 t1 t1 t1 t1"
+	". a a a a ."
+	". i1 i2 i2 i3 ."
+	". p1 p2 p2 p3 ."
+	"t2 t2 t2 t2 t2 t2"
+	". g g g g ."
+	"t3 t3 t3 t3 t3 t3"
+	". d1 d1 d3 d3 ."
+	". d2 d2 o o ."
+	"t4 t4 t4 t4 t4 t4"
+	". k1 k2 k2 k3 ."
+	". insta mail mail tme ."
+	". . . . . ."
+}
+.header{
+	grid-area: h;
+	background-color:var( --green);
+	position: fixed;
+	height: auto;
+	z-index: 2;
+	padding:  3vh 20vw;
+}
+.menu{
+	width: 60vw;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	text-align: center;
+	align-items: center;
+	font-size: var(--fs);
+}
+.menu a {
+	text-decoration: none;
+	font-weight: 600;
+}
+.logo{
+	grid-area: l;
+	background-image: url(../img/logo.png), url(../img/fon.jpg) ;
+	background-position: center, center;/*background-image: url(../img/logo.png);*/
+	background-size: 60vw, auto, cover;
+	background-repeat: no-repeat;
+}
+.title{
+	margin-top: 8vh;
+	margin-bottom: 3vh;
+	font-weight: bold;
+	font-size: calc(var(--fs)*2);
+	text-transform: uppercase;
+	text-align: center;
+}
+.t1{
+	grid-area: t1;
+}
+.t2{
+	grid-area: t2;
+}
+.t3{
+	grid-area: t3;
+}
+.t4{
+	grid-area: t4;
+	margin-bottom: 5vh;
+}
+.about{
+	grid-area: a;
+	margin-bottom: 7vh;
+	font-size: var(--fs);
+}
+.i{
+	justify-self: center;
+}
+.i img{
+	width: auto;
+	height: 8vw;
+	margin-bottom: 2vh;
+}
+.i1{
+	grid-area: i1;
+	padding-right: 4vw;
+}
+.i2{
+	grid-area: i2;
+}
+.i3{
+	grid-area: i3;
+	padding-left: 4vw;
+}
+.a1{
+	grid-area: a1;
+	padding-right: 4vw;
+}
+.a2{
+	grid-area: a2;
+}
+.a3{
+	grid-area: a3;
+	padding-left: 4vw;
+}
+.podpis{
+	text-align: justify;
+	margin-top: 2.2vh; 
+}
+.podpis a{
+	text-align: left;
+	font-weight: bold;
+	margin-top: 2.5vh;
+}
+.podpis h2{
+	text-align: center;
+}
+.p1{
+	grid-area: p1;
+	padding-right: 4vw;
+}
+.p2{
+	grid-area: p2;
+	padding-right: 2vw;
+	padding-left: 2vw;
+}
+.p3{
+	grid-area: p3;
+	padding-left: 4vw;
+}
+.d1{
+	grid-area: d1;
+	margin-right: 5vw;
+}
+.d2{
+	grid-area: d2;
+	margin-right: 5vw;
+	margin-top: 2.5vh;
+}
+.d3{
+	grid-area: d3;
+	margin-left: 5vw; 
+}
+.o{
+	grid-area: o;
+	margin-left: 5vw; 
+	margin-top: 2.5vh;
+}
+
+.k{
+	justify-self: center;
+}
+.k img{
+	width: 5vw;
+	margin-bottom: 2vh;
+}
+.k1{
+
+	grid-area: k1;
+}
+.k2{
+	grid-area: k2;
+}
+.k3{
+	grid-area: k3;
+}
+.kont{
+	grid-area: ko;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+}
+.insta{
+	grid-area: insta; 
+	text-align: center;
+}
+.mail{
+	grid-area: mail; 
+	text-align: center;
+}
+.tme{
+	grid-area: tme; 
+	text-align: center;
+}
+
+/*медиа-запрос ПЛАНШЕТЫ*/
+ @media only screen and (max-width: 960px) and (min-width: 761px){
+html{
+	--fs: calc(86vw/40);
+}
+ 	h2{
+	font-weight: 600;
+	font-size: var(--fs);
+	text-align: left;
+}
+ 	.container{
+	grid-template-columns: 0.5fr 2fr 1fr 1fr 2fr 0.5fr;  
+	grid-template-rows: 5vh 95vh repeat(16, auto) 3vh;
+	grid-template-areas: 
+	"h h h h h h"
+	"l l l l l l"
+	"t1 t1 t1 t1 t1 t1"
+	". a a a a ."
+	". i1 i2 i2 i3 ."
+	". p1 p2 p2 p3 ."
+	"t2 t2 t2 t2 t2 t2"
+	"g g g g g g"
+	"t3 t3 t3 t3 t3 t3"
+	". d1 d1 d3 d3 ."
+	". d2 d2 o o ."
+	"t4 t4 t4 t4 t4 t4"
+	". k1 k2 k2 k3 ."
+	". insta mail mail tme ."
+	". . . . . ."
+}
+.header{
+	grid-area: h;
+	background-color:var( --green);
+	position: fixed;
+	height: 5vh;
+	z-index: 2;
+	padding:  3vh 7vw;
+}
+.menu{
+	width: 86vw;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-content: center;
+	font-size: var(--fs);
+}
+.menu a {
+	text-decoration: none;
+	font-weight: 600;
+}
+.logo{
+	background-image: url(../img/logo.png), url(../img/fon.jpg) ;
+	background-position: center, center;/*background-image: url(../img/logo.png);*/
+	background-size: 86vw, auto, cover;
+	background-repeat: no-repeat;
+}
+.podpis{
+	font-size: calc(var(--fs)*0.8);
+}
+.k img{
+	width: 7vw;
+	margin-bottom: 2vh;
+}
+
+}
+/*медиа-запрос ТЕЛЕФОНЫ*/
+ @media only screen and (max-width: 760px){
+ 	html{
+	--fs: calc(100vw/15);
+}
+.container{
+	display: grid;
+	grid-template-columns: 0.5fr 2fr 1fr 1fr 2fr 0.5fr;  
+	grid-template-rows: 10vh 95vh repeat(16, auto) auto auto auto;
+	grid-template-areas: 
+	"w w w w w w"
+	"l l l l l l"
+	"t1 t1 t1 t1 t1 t1"
+	". a a a a ."
+	". i1 i1 i1 i1 ."
+	". p1 p1 p1 p1 ."
+	". i2 i2 i2 i2 ."
+	". p2 p2 p2 p2 ."
+	". i3 i3 i3 i3 ."
+	". p3 p3 p3 p3 ."
+	"t2 t2 t2 t2 t2 t2"
+	". g g g g ."
+	"t3 t3 t3 t3 t3 t3"
+	". d1 d1 d1 d1 ."
+	". d2 d2 d2 d2 ."
+	". d3 d3 d3 d3 ."
+	". o o o o ."
+	"t4 t4 t4 t4 t4 t4"
+	". k1 k2 k2 k3 ."
+	". insta mail mail tme ."
+	". . . . . ."
+}
+.header{
+	display: none;
+	width: 100vw;
+	height: 5vh;
+	padding:  3vh 5vw;
+	/*display: none;*/
+}
+.menu{
+	width: 90vw;
+	font-size: var(--fs)/5;
+	/*display:none;*/
+}
+.logo{
+	background-image: url(../img/logo_vertical.png), url(../img/fon.jpg) ;
+	background-size: 86vw, auto, cover;
+}
+.about{
+	font-size: calc(var(--fs)*0.8);
+}
+.i img{
+	width: auto;
+	height: auto;
+	margin-bottom: 2vh;
+}
+.podpis{
+	font-size: calc(var(--fs)*0.8);
+	margin-bottom: 2vh;
+}
+.d1{
+	margin-right: 0vw;
+	margin-top: 1vh;
+}
+.d2{
+	margin-right: 0vw;
+	margin-top: 1vh;
+}
+.d3{
+	margin-left: 0vw; 
+	margin-top: 1vh;
+}
+.o{
+	margin-left: 0vw; 
+	margin-top: 1vh;
+}
+.insta{
+	display:none;
+}
+.mail{
+	display:none;
+}
+.tme{
+	display:none;
+}
+.k img{
+	width: 14vw;
+	margin-bottom: 2vh;
+}
+}

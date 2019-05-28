@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<title>Сладкие букеты</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="css/second.css"/>
+	<link rel="stylesheet" type="text/css" href="css/menu.css"/>
+	<link rel="stylesheet" type="text/css" href="css/form.css"/>
+	<link rel="stylesheet" type="text/css" href="fonts/fonts.css"/>
+</head>
+<body>
+	<div class="osn_grid">
+	<div class="header">
+		<div class="menu">
+			<a href="index.html" title="Главная">Главная</a>
+			<a href="candy.html" title="Сладкие букеты">Сладкие букеты</a>
+			<a href="fruit.html" title="Фруктовые букеты">Фруктовые букеты</a>
+			<a href="box.html" title="Подарочные боксы">Подарочные боксы</a>
+		</div>
+	</div>
+<div class="wrapper">
+        <input type="checkbox" id="check-menu">
+        <label for="check-menu"></label>
+        <div class="burger-line first"></div>
+        <div class="burger-line second"></div>
+        <div class="burger-line third"></div>
+        <div class="burger-line fourth"></div>
+        <nav class="main-menu">
+            <a href="index.html">Главная</a>
+            <a href="candy.html">Сладкие букеты</a>
+            <a href="fruit.html">Фруктовые букеты</a>
+            <a href="box.html">Подарочные боксы</a>
+        </nav>
+    	</div>
+	
+	
+	<div class="title" style="padding-top: 10vh">Сладкие букеты</div>
+	<div class="polosochka">
+		<hr width=100% >
+		<img src="img/candy/роза.png">
+		<hr width=100% >		
+	</div>
+
+	<div id="container2">
+				<div class="el">
+			<img src="img/candy/1.jpg" alt="1">
+			<div class="pod">
+				<div><h2>400 грн</h2></div>
+				<button type="text" value="Ореховый букет" id="b1" onclick="f1()"><a href="#openModal">Заказать</a></button>
+			</div>
+		</div>
+
+		<div class="el">
+			<img src="img/candy/2.jpg" alt="2">
+			<div class="pod">
+				<div><h2>400 грн</h2></div>
+				<button type="text" value="Желтые тюльпаны" id="b2" onclick="f2()"><a href="#openModal">Заказать</a></button>
+			</div>
+		</div>
+
+		<div class="el">
+			<img src="img/candy/3.jpg" alt="3">
+			<div class="pod">
+				<div><h2>400 грн</h2></div>
+				<button type="text" value="Санки" id="b2" onclick="f3()"><a href="#openModal">Заказать</a></button>
+			</div>
+		</div>
+
+		<div class="el">
+			<img src="img/candy/4.PNG" alt="4">
+			<div class="pod">
+				<div><h2>400 грн</h2></div>
+				<button type="text" value="4" id="b4" onclick="f4()"><a href="#openModal">Заказать</a></button>
+			</div>
+		</div>
+		<div class="el">
+			<img src="img/candy/5.PNG" alt="5">
+			<div class="pod">
+				<div><h2>400 грн</h2></div>
+				<button type="text" value="5" id="b5" onclick="f5()"><a href="#openModal">Заказать</a></button>
+			</div>
+		</div>
+		<div class="el">
+			<img src="img/candy/6.PNG" alt="6">
+			<div class="pod">
+				<div><h2>400 грн</h2></div>
+				<button type="text" value="6" id="b6" onclick="f6()"><a href="#openModal">Заказать</a></button>
+			</div>
+		</div>
+		<div class="el">
+			<img src="img/candy/7.PNG" alt="7">
+			<div class="pod">
+				<div><h2>400 грн</h2></div>
+				<button type="text" value="7" id="b7" onclick="f7()"><a href="#openModal">Заказать</a></button>
+			</div>
+		</div>
+		<div class="el">
+			<img src="img/candy/8.PNG" alt="8">
+			<div class="pod">
+				<div><h2>400 грн</h2></div>
+				<button type="text" value="8" id="b8" onclick="f8()"><a href="#openModal">Заказать</a></button>
+			</div>
+		</div>
+		<div class="el">
+			<img src="img/candy/9.PNG" alt="9">
+			<div class="pod">
+				<div><h2>400 грн</h2></div>
+				<button type="text" value="9" id="b9" onclick="f9()"><a href="#openModal">Заказать</a></button>
+			</div>
+		</div>
+				
+<!-- Модальное окно -->
+		<div id="openModal" class="modalDialog">
+			<div class="container">
+				<a href="#close" title="Закрыть" class="close">X</a>
+				
+
+				<!--Данные введенные пользователем обрабатываются кодом в mail.php-->
+				<form action="./mail.php" method="post">
+					<h2 style="text-align: center;">Заказ</h2>
+					<div class="field-block">
+						<!--<label for="tovar">Товар:</label>-->
+						<input type="hidden" name="tovar" value="" id="tovar">
+					</div>
+
+					<div class="field-block">
+						<label for="imya"> Ваше имя:</label>
+						<input type="text" name="imya">
+					</div> 
+					<div class="field-block">
+						<label for="email">E-mail:</label>
+						<input type="text" name="email">
+					</div> 
+					<div class="field-block">
+						<label for="phone">Номер телефона:</label>
+						<input type="text" name="phone">
+					</div> 
+					<div class="field-block">
+						<label for="">Детали заказа:</label>
+						<textarea rows="5" cols="45" name="message"></textarea>
+					</div> 
+					<button type="submit">Отправить сообщение</button>
+					</form>
+			</div>
+		</div>
+		<div id="thank" class="modalDialog">
+			<div class="container" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height:25vh">
+				<a href="#close" title="Закрыть" class="close">X</a>
+				Спасибо за Ваш заказ! Мы свяжемся с Вами в ближайшее время.
+				<button type="text"><a href="candy.html">Ok</a></button>
+			</div>
+	    </div>
+	</div>
+</div>
+<div id="footer">
+	2019 г.
+</div>
+<script src="js/knopki.js"></script>
+</body>
+</html>

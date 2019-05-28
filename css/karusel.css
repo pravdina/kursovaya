@@ -1,0 +1,102 @@
+.carousel {
+  position: relative;
+  width: 60vw;
+  height: auto;
+  padding: 10px 5vw;
+  grid-area: g;
+  /*height: 65vh;*/
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.carousel img {
+  height: auto;
+  width: 18vw;
+  margin: 0 ;
+  display: block;
+}
+
+.arrow {
+  position: absolute;
+  top: 25vh;
+  border:none;
+  display:block;
+  width:1.5vw;
+  height:8vh;
+  cursor:pointer;
+  /*text-indent:-9999em;*/
+  background-color:transparent;
+  background-repeat:no-repeat;
+}
+
+.arrow:focus {
+  outline: none;
+}
+
+.arrow:hover {
+  /*background: #ccc;*/
+  cursor: pointer;
+}
+
+.prev {
+  left: 1vw;
+  background-image: url(../img/влево.png);
+  background-size: contain;
+  /*background-size: auto auto;*/
+  /*background-size: cover;*/
+  
+}
+
+.next {
+  right: 1vw;
+  background-image: url(../img/вправо.png);
+  background-size: contain;
+}
+
+.gallery {
+  overflow: hidden;
+}
+
+.gallery ul {
+  height: auto;
+  width: 9999px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-transition: margin-left 600ms;
+  -o-transition: margin-left 600ms;
+  transition: margin-left 600ms;
+  font-size: 0;
+}
+
+.gallery li {
+  width: 18vw;
+  display: inline-block;
+  margin: 0 1vw;
+}
+@media only screen and (max-width: 960px) and (min-width: 761px){
+.carousel {
+  width: 84vw;
+}
+.carousel img {
+  width: 26vw;
+}
+.gallery li {
+  width: 26vw;
+  display: inline-block;
+  margin: 0 1vw;
+}
+}
+@media only screen and (max-width: 760px){
+.carousel {
+  width: 84vw;
+}
+.carousel img {
+  width: 40vw;
+}
+.gallery li {
+  width: 40vw;
+  display: inline-block;
+  margin: 0 1vw;
+}
+}

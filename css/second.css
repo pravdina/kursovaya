@@ -1,0 +1,48 @@
+.osn_grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+#container2 {
+  margin: 10vh 10vw;
+  color: white;
+  /*background-color: lightgray;*/
+  font-family: sans-serif;
+  display: grid;
+  grid-gap: 4vw;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+}
+.el {
+  color: white;
+  height: 
+}
+.el img{
+	width: 100%;
+	height: auto;
+}
+.pod{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.pod button{
+    width:50%;
+}
+.polosochka{
+  margin: 0 10vw;
+  display: flex;
+  flex-direction: row;
+  align-items: : stretch;
+  justify-content: space-between;
+}
+.polosochka img{
+  margin: 0 3vw;
+}
+hr {
+    border: none; /* Убираем границу */
+    background-color: #dcf4ef; /* Цвет линии */
+    color: #dcf4ef; /* Цвет линии для IE6-7 */
+    height: 3px; 
+    margin: auto 0;/* Толщина линии */
+
+}
